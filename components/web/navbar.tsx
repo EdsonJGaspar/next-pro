@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { buttonVariants } from "../ui/button";
+import { ThemeToggle } from "./theme-toggle";
 
 export function NavBar() {
   return (
@@ -34,6 +35,7 @@ export function NavBar() {
           </Link>
         </div>
       </header>
+      <ThemeToggle />
     </nav>
   );
 }
