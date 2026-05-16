@@ -1,6 +1,6 @@
 import AulaProps from "../model/aula";
 
-const aulas: AulaProps[] = [
+export const aulas: AulaProps[] = [
   {
     id: "1",
     nome: "Introdução à Programação",
