@@ -16,16 +16,13 @@ export function NavBar() {
           <Link href="/blog" className={buttonVariants({ variant: "ghost" })}>
             Blog
           </Link>
-          <Link
-            href="/contact"
-            className={buttonVariants({ variant: "ghost" })}
-          >
-            Contact
+          <Link href="/criar" className={buttonVariants({ variant: "ghost" })}>
+            Criar
           </Link>
         </div>
         <div className="flex items-center gap-2">
-          <Link href="/auth/log-out" className={buttonVariants()}>
-            Log Out
+          <Link href="/auth/sign-up" className={buttonVariants()}>
+            Sign up
           </Link>
           <Link
             href="/auth/login"
