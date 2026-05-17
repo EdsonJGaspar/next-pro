@@ -9,7 +9,7 @@ export interface TituloProps {
 export default function Titulo(props: TituloProps) {
   return (
     <div className="flex gap-4">
-      <props.icone size={55} />
+      <props.icone size={55} stroke-width="1" />
 
       <div>
         <h1>{props.principal}</h1>

@@ -5,14 +5,14 @@ import { VideoIcon } from "lucide-react";
 
 export default function AulaPage() {
   return (
-    <div className="flex h-screen flex-col max-w-7xl mx-auto py-10">
+    <div className="flex h-screen flex-col max-w-7xl mx-auto py-10 gap-10 bg-zinc-300">
       <Titulo
         principal="Lista de aulas"
         secundario="Aqui você encontrará todas as aulas disponíveis"
         icone={VideoIcon}
       />
 
-      <ul className="w-full">
+      <ul className="w-full space-y-10 border">
         {aulas.map((aula) => {
           return (
             <ListarAula
