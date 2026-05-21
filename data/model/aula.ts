@@ -1,5 +1,5 @@
 export default interface AulaProps {
-  id?: string;
+  id: string;
   nome: string;
   curso: string;
   duracao: number;

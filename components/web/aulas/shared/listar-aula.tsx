@@ -1,7 +1,10 @@
 import AulaProps from "@/data/model/aula";
 import { formatarDuracao } from "@/data/utils/duracao";
+import { AulaStatus } from "./aula-status";
 
-export function ListarAula({ nome, curso, duracao, status }: AulaProps) {
+type ListarAulaProps = Omit<AulaProps, "id">;
+
+export function ListarAula({ nome, curso, duracao, status }: ListarAulaProps) {
   return (
     <li className="flex items-center justify-between bg-zinc-800 hover:bg-zinc-900 cursor-pointer border px-5 py-2 rounded-md transition-all duration-300">
       <div>
@@ -10,24 +13,9 @@ export function ListarAula({ nome, curso, duracao, status }: AulaProps) {
         </h2>
         <h3 className="text-zinc-400">{curso}</h3>
       </div>
-      <div className="flex gap-5 items-center justify-center p-2">
-        {status === "publicada" && (
-          <p className="bg-blue-500 border px-2.5 rounded-md font-light">
-            {status}
-          </p>
-        )}
-        {status === "rascunho" && (
-          <p className="text-yellow-500  border px-2.5 rounded-md font-light">
-            {status}
-          </p>
-        )}
-        {status === "desativada" && (
-          <p className="bg-red-500 border px-2.5 rounded-md font-light">
-            {status}
-          </p>
-        )}
-
-        <h3 className="font-bold text-xl font-mono">
+      <div className="flex items-center gap-4">
+        <AulaStatus status={status} />
+        <h3 className="font-bold text-xl font-mono w-40 text-right">
           {formatarDuracao(duracao)}
         </h3>
       </div>
