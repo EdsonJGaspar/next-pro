@@ -8,12 +8,16 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { ChevronDown } from "lucide-react";
 
 export function FiltrarStatus() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <Button variant="outline">Open</Button>
+        <div className="flex items-center font-mono gap-1.5">
+          <span>Filtrar por</span>
+          <ChevronDown />
+        </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuGroup>
