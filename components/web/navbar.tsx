@@ -13,11 +13,17 @@ export function NavBar() {
           <Link href="/" className={buttonVariants({ variant: "ghost" })}>
             Home
           </Link>
-          <Link href="/blog" className={buttonVariants({ variant: "ghost" })}>
-            Blog
+          <Link
+            href="/dashboard/usuarios"
+            className={buttonVariants({ variant: "ghost" })}
+          >
+            Usuarios
           </Link>
-          <Link href="/criar" className={buttonVariants({ variant: "ghost" })}>
-            Criar
+          <Link
+            href="/dashboard/analytics"
+            className={buttonVariants({ variant: "ghost" })}
+          >
+            Analises
           </Link>
           <Link href="/aula" className={buttonVariants({ variant: "ghost" })}>
             Aula
