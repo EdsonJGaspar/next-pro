@@ -28,6 +28,9 @@ export function NavBar() {
           <Link href="/aula" className={buttonVariants({ variant: "ghost" })}>
             Aula
           </Link>
+          <Link href="/books" className={buttonVariants({ variant: "ghost" })}>
+            Livros
+          </Link>
         </div>
         <div className="flex items-center gap-2">
           <Link href="/auth/sign-up" className={buttonVariants()}>
