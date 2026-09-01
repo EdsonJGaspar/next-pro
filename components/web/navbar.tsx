@@ -20,6 +20,12 @@ export function NavBar() {
             Usuarios
           </Link>
           <Link
+            href="/dashboard/estudante"
+            className={buttonVariants({ variant: "ghost" })}
+          >
+            Estudante
+          </Link>
+          <Link
             href="/dashboard/analytics"
             className={buttonVariants({ variant: "ghost" })}
           >
