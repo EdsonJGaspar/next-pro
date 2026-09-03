@@ -10,6 +10,7 @@ export default function AnaliticsPage() {
     },
     onSubmit: async ({ value }) => {
       console.log(value);
+      form.reset();
     },
   });
   return (
