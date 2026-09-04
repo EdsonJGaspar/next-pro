@@ -22,7 +22,6 @@ export function FormCount() {
   });
 
   const age = useSelector(form.store, (state) => state.values.age);
-  const erros = useSelector(form.store, (state) => state.errorMap);
 
   return (
     <div>
@@ -45,6 +44,11 @@ export function FormCount() {
                   value={field.state.value}
                   onChange={(e) => field.handleChange(Number(e.target.value))}
                 />
+                {!field.state.meta.isValid && (
+                  <em role="alert" className="text-destructive text-sm">
+                    {field.state.meta.errors[0]?.message}
+                  </em>
+                )}
               </div>
             );
           }}
