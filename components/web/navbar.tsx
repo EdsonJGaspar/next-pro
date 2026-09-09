@@ -37,6 +37,12 @@ export function NavBar() {
           <Link href="/books" className={buttonVariants({ variant: "ghost" })}>
             Livros
           </Link>
+          <Link
+            href="/chatboot"
+            className={buttonVariants({ variant: "ghost" })}
+          >
+            Chatboot
+          </Link>
         </div>
         <div className="flex items-center gap-2">
           <Link href="/auth/sign-up" className={buttonVariants()}>
