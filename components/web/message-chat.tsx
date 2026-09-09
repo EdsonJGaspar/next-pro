@@ -5,17 +5,17 @@ type MessageChatProps = {
   isUser?: boolean;
 };
 
-export function MessageChat({ message, isUser }: MessageChatProps) {
+export function MessageChat(props: MessageChatProps) {
   return (
     <div className="flex gap-4 items-center justify-between bg-accent p-4 rounded-lg my-2">
-      {isUser ? (
+      {props.isUser ? (
         <>
-          <p className="flex-1">{message}</p> <UserRound size={40} />
+          <p className="flex-1">{props.message}</p> <UserRound size={40} />
         </>
       ) : (
         <>
           <BotMessageSquare size={40} />
-          <p className="flex-1">{message}</p>
+          <p className="flex-1">{props.message}</p>
         </>
       )}
     </div>
